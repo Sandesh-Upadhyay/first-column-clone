@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { 
-  Popover, 
-  PopoverContent, 
-  PopoverTrigger 
-} from '@/components/ui/popover';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger
+} from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { 
   AlertTriangle, 
@@ -25,14 +25,14 @@ const SecurityPopup: React.FC<SecurityPopupProps> = ({
   onOpenChange 
 }) => {
   return (
-    <Popover open={open} onOpenChange={onOpenChange}>
-      <PopoverTrigger asChild>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogTrigger asChild>
         <Button variant="outline" size="sm" className="flex items-center gap-1 border-status-red text-status-red hover:bg-status-red/10">
           <AlertTriangle size={16} />
           <span>Security</span>
         </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-80 p-0">
+      </DialogTrigger>
+      <DialogContent className="p-0 border-0 max-w-md w-full shadow-lg">
         <div className="bg-status-red p-4 text-white rounded-t-md">
           <div className="flex items-center gap-2">
             <Shield size={18} />
@@ -41,7 +41,7 @@ const SecurityPopup: React.FC<SecurityPopupProps> = ({
           <p className="text-sm mt-1">Multiple vulnerabilities detected</p>
         </div>
         
-        <div className="p-4">
+        <div className="p-4 bg-white rounded-b-md">
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <FileWarning size={16} className="text-status-red mt-0.5" />
@@ -90,8 +90,8 @@ const SecurityPopup: React.FC<SecurityPopupProps> = ({
             </Button>
           </div>
         </div>
-      </PopoverContent>
-    </Popover>
+      </DialogContent>
+    </Dialog>
   );
 };
 
