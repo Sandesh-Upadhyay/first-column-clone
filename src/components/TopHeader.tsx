@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Bell, ChevronDown, User } from 'lucide-react';
+import SecurityPopup from './SecurityPopup';
 
 const TopHeader = () => {
   return (
@@ -10,6 +11,8 @@ const TopHeader = () => {
       </div>
       
       <div className="flex items-center gap-4">
+        <SecurityPopup />
+        
         <button className="relative text-slate-500 hover:text-slate-700">
           <Bell size={20} />
           <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
