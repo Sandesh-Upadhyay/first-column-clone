@@ -32,7 +32,7 @@ const SecurityPopup: React.FC<SecurityPopupProps> = ({
           <span>Security</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="p-0 border-0 max-w-md w-full shadow-lg">
+      <DialogContent className="p-0 border-0 max-w-md w-full shadow-lg bg-white rounded-md">
         <div className="bg-status-red p-4 text-white rounded-t-md">
           <div className="flex items-center gap-2">
             <Shield size={18} />
